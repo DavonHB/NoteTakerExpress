@@ -1,7 +1,7 @@
 //Require
 const express = require('express');
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
+const fs = require('fs');
+const path = require('path');
 
 //initialize app
 const app = express();
@@ -14,8 +14,9 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 //static files
 app.use(express.static('public'));
-app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
+
+//route file require
+require('./routes/routes')(app);
 
 //Listener
 app.listen(PORT, () => {
