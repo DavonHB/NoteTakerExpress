@@ -3,6 +3,9 @@ const express = require('express');
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
+const fs = require("fs");
+const path = require('path');
+
 //initialize app
 const app = express();
 
