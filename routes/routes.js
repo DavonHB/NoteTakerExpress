@@ -36,7 +36,7 @@ module.exports = app => {
             console.log('Deleted note');
         });
 
-        //Routes
+        //html routes
 
         //display notes.html when /notes is accessed
         app.get('/notes', function (req, res) {
