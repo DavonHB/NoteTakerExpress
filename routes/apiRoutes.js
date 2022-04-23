@@ -20,7 +20,7 @@ router.get('/notes', (req, res) => {
     }).catch(err => {
         res.status(400).json(err)
     })
-});
+})
 
 //note delete route
 router.delete('/notes/:id', (req, res) => {
